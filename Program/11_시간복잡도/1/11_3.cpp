@@ -6,8 +6,11 @@
 MenOfPassion 알고리즘은 다음과 같다.
 
 MenOfPassion(A[], n) {
-    i = ⌊n / 2⌋;
-    return A[i]; # 코드1
+    sum <- 0;
+    for i <- 1 to n
+        for j <- 1 to n
+            sum <- sum + A[i] × A[j]; # 코드1
+    return sum;
 }
 */
 
@@ -15,30 +18,22 @@ MenOfPassion(A[], n) {
 #include <iostream>
 #include <string>
 
-int MenOfPassion(int n){
-
-    int i = n/2;
-    return 1;
-}
-
 int main(){
 
     int num;
-    int num2;
+    int input;
+    
+    input = 7;
 
-    std::cout << "숫자 입력 : " << std::endl;
-    std::cin >> num;  
-
-    num2 = MenOfPassion(num);
-
-        std::cout << num2 << std::endl;
+    std::cout << input * input << std::endl;
+    std::cout << "2" << std::endl;
 
 
     return 0;
 }
 /*
 
-시간복잡도는 O(1)
+시간복잡도는 O(n^2)
 
 */
 
